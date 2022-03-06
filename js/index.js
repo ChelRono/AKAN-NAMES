@@ -15,18 +15,9 @@ gender = document.getElementById("Gender").value
     let yearOfBirth=date.getFullYear();
     let monthOfTheYear=date.getMonth();
     let day=daysOfWeek[date.getDay()];
+//formula to get daysOfWeek
 
-    CC - century
-
- YY - yearOfBirth
-
- MM -  birthMonth
-
- DD - dayOfBirth
-
- mod - mod 
-
- days0fWeek= ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ;  7
+ days0fWeek= Math.floor(((centuryOfBirth.slice(0,2)-2*centuryOfBirth.slice(0,2-1)+((5*yearOfBirth(2,4)/4)+((26*monthOfBirth+1)/10))+dayOfBirth)%7);
 
  let dayOfBirth;
  
@@ -84,3 +75,6 @@ gender = document.getElementById("Gender").value
     let result = document.getElementById("reveal-result").innerHTML = "You were born on a " + dayOfBirth + " so your akan name is " + akanName + "!"
     document.getElementById("form").reset();
 });
+var days0fWeek = new Date();
+
+console.log(days0fWeek.getDay()); // sunday = 0, monday = 1, etc..
