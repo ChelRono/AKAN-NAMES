@@ -6,7 +6,7 @@ console.log(Akan-names)
   var maleAkanNames=['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame']
   var femaleAkanNames=['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama']
   let form=document.getElementById("form");
-  form.addEventListener("Submit", (Event))=>{event.preventDefault();
-    let gender=document.getElementsByName("gender")
-
-
+  form.addEventListener("Submit", (Event));{event.preventDefault();
+}
+var daysOfWeek= new Date();
+let day = daysOfWeek[d.getDay()]
