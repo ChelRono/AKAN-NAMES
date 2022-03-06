@@ -8,5 +8,9 @@ console.log(Akan-names)
   let form=document.getElementById("form");
   form.addEventListener("Submit", (Event));{event.preventDefault();
 }
-var daysOfWeek= new Date();
-let day = daysOfWeek[d.getDay()]
+gender = document.getElementById("Gender").value
+    date= document.getElementById("date").value
+
+    let yearOfBirth=date.getFullYear();
+    let monthOfTheYear=date.getMonth();
+    let day=daysOfWeek[date.getDay()];
