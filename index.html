@@ -45,50 +45,33 @@
                     <li>Saturday: Ama</li>
                 </ul>
      </div>
-    <div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center position-relative"></div>
-        <form class="form" onsubmit="return getAkanName()">
-            <h4>Fill in this form;</h4>
+    <div class="form col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center position-relative"></div>
+        <form id="myForm">
+            <h4>Fill in this form;</h4><br>
             <label for="fname">FIRST NAME:</label><br>
             <input type="text" id="fname" name="fname" required><br>
             <label for="lname">LAST NAME:</label><br>
             <input type="text" id="lname" name="lname" required>
-            <p>
-            <label for="YOB">
-                YEAR:<br>
-              <input id="year" type="number" name="year-of-birth" placeholder="YYYY" value="" required>
-             
-            </label><br>
-            <label for="MM">
-              MONTH:<br>
-              <input id="month-input" type="number" name="month-of-birth" placeholder="MM" value="" required>
-            </label><br>
-            <label for="DD">
-              DAY:<br>
-              <input id="day-input" type="number" name="day-of-birth" placeholder="DD" value="" required>
-            </label>
-            <br>
-                    
-                    <p>
-                        Select your gender:
-                    </p>
-
+                    <p>Select your gender</p>
                     <input type="radio" id="Male" name="Gender" value="Male">
                     <label for="Male">MALE</label><br>
                     <input type="radio" id="Female" name="Gender" value="Female">
                     <label for="Female">FEMALE</label><br>
-                    
-                    <button onclick="getElementById('day').innerHTML = day()">Generate name</button>
-                <br>
+                    <label for="date">Enter your day of birth</label><br>
+                    <input type="date" name="date" id="date" required>
+            </form>
+                </div>
+                    <input id="get-name" type="submit" name="" value="submit">
+          <br>
                 <form onsubmit="clearInput()">
                     <input class="clear" type="submit" value="Clear input">
                 
                 <h4 id=display-name><strong>Your Akan name will be displayed below:</strong></h4>
                 <p id="result"></p>
                 </form>
-                </form>
    </section>
      </div>
-    <script src="script.js"></script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>
