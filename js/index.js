@@ -1,31 +1,31 @@
-console.log(Akan - names)
-let form = document.getElementById("form");
-form.addEventListener("Submit", (e)); {
-    e.preventDefault();
-}
-//formula to determine day of month
+
+
+//formula
+    days0fWeek= Math.floor(((centuryOfBirth.slice(0, 2) - 2 * centuryOfBirth.slice(0, 2 - 1) + ((5 * yearOfBirth(2, 4) / 4) + ((26 * monthOfTheYear + 1) / 10)) + dayOfBirth) % 7);    
+   
+    let gender = document.getElementById("gender").value;
+    //console.log(gender);
 
 //creating arrays for female and male Akan names and days of the week
 var days0fWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 var maleAkanNames = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame']
 var femaleAkanNames = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama']
 
+let form = document.getElementById("form");
+form.addEventListener("Submit", (event) => {
+    event.preventDefault();
+   
 gender = document.getElementById("Gender").value
 date = document.getElementById("date").value
 
-let yearOfBirth = date.getFullYear();
-let monthOfTheYear = date.getMonth();
-let day = daysOfWeek[date.getDay()];
-//formula to get daysOfWeek
 
-days0fWeek = Math.floor(((centuryOfBirth.slice(0, 2) - 2 * centuryOfBirth.slice(0, 2 - 1) + ((5 * yearOfBirth(2, 4) / 4) + ((26 * monthOfTheYear + 1) / 10)) + dayOfBirth) % 7);
 
-function dayValidation() {
-
-    if (daysOfWeek == 0 && gender == "female") {
+    if (days0fWeek == 0 && gender == "female") {
         dayOfBirth = "Saturday";
         akanName = femaleAkanNames[0];
-    } else if (daysOfWeek == 0 && gender == "male") {
+        
+    } 
+    else if (daysOfWeek == 0 && gender == "male") {
         dayOfBirth = "Saturday";
         akanName = maleAkanNames[0];
     }
@@ -33,11 +33,12 @@ function dayValidation() {
     if (daysOfWeek == 1 && gender == "female") {
         dayOfBirth = "Sunday";
         akanName = femaleAkanNames[1];
-    } else if (daysOfWeek == 1 && gender == "male") {
+        
+    } 
+    else if (daysOfWeek == 1 && gender == "male") {
         dayOfBirth = "Sunday";
         akanName = maleAkanNames[1];
     }
-
     if (daysOfWeek == 2 && gender == "female") {
         dayOfBirth = "Monday";
         akanName = femaleAkanNames[2];
@@ -73,10 +74,3 @@ function dayValidation() {
         dayOfBirth = "Friday";
         akanName = maleAkanNames[6];
     }
-}
-let result = document.getElementById("reveal-result").innerHTML = "You were born on a " + dayOfBirth + " so your akan name is " + akanName + "!"
-document.getElementById("form").reset();
-
-var days0fWeek = new Date();
-
-console.log(days0fWeek.getDay()); // sunday = 0, monday = 1, etc..

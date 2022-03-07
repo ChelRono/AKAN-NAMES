@@ -17,7 +17,7 @@
             background-size: cover;
         }
     </style>
-    <div>
+    <div class="col-lg-4">
                     <h1>AKAN NAMES</h1>
                 <P>Akan names are derived from the Ghanian culture.In Ghana children are given first names and 'day'
                     names which
@@ -46,9 +46,10 @@
     </div>
     <div class="form-center">
 
-        <div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
-                <h4>Fill in this form;</h4>
+        <div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center position-relative">
+                
                 <form id="form" onsubmit=" getAkanName()">
+                    <h4>Fill in this form;</h4>
                     <label for="fname">First name:</label><br>
                     <input type="text" id="fname" name="fname" required><br>
                     <label for="lname">Last name:</label><br>
@@ -62,7 +63,8 @@
                     <input type="radio" id="Female" name="Gender" value="Female">
                     <label for="Female">Female</label><br>
                     <input type="date" placeholder="Select date">
-                    <input id="get-name" type="submit" name="" value="Generate name">
+                    
+                    <button onclick="getElementById('day').innerHTML = day()">Generate name</button>
                 <br>
                 <form onsubmit="clearInput()">
                     <input class="clear" type="submit" value="Clear input">
