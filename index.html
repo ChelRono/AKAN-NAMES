@@ -17,7 +17,8 @@
             background-size: cover;
         }
     </style>
-    <div class="col-lg-4">
+    
+     <div class="container col-md-4 ">
                     <h1>AKAN NAMES</h1>
                 <P>Akan names are derived from the Ghanian culture.In Ghana children are given first names and 'day'
                     names which
@@ -43,26 +44,37 @@
                     <li>Friday: Afua</li>
                     <li>Saturday: Ama</li>
                 </ul>
-    </div>
-    <div class="form-center">
-
-        <div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center position-relative">
-                
-                <form id="form" onsubmit=" getAkanName()">
-                    <h4>Fill in this form;</h4>
-                    <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" required><br>
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname" required>
+   <section>
+    <div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center position-relative">
+        <form class="form" onsubmit="return getAkanName()">
+            <h4>Fill in this form;</h4>
+            <label for="fname">FIRST NAME:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">LAST NAME:</label><br>
+            <input type="text" id="lname" name="lname" required>
+            <p>
+            <label for="YOB">
+              YEAR:
+              <input id="year" type="number" name="year-of-birth" placeholder="YYYY" value="" required>
+            </label>
+            <label for="MM">
+              MONTH:
+              <input id="month-input" type="number" name="month-of-birth" placeholder="MM" value="" required>
+            </label>
+            <label for="DD">
+              DAY:
+              <input id="day-input" type="number" name="day-of-birth" placeholder="DD" value="" required>
+            </label>
+            <br>
+                    
                     <p>
                         Select your gender:
                     </p>
 
                     <input type="radio" id="Male" name="Gender" value="Male">
-                    <label for="Male">Male</label><br>
+                    <label for="Male">MALE</label><br>
                     <input type="radio" id="Female" name="Gender" value="Female">
-                    <label for="Female">Female</label><br>
-                    <input type="date" placeholder="Select date">
+                    <label for="Female">FEMALE</label><br>
                     
                     <button onclick="getElementById('day').innerHTML = day()">Generate name</button>
                 <br>
@@ -72,7 +84,10 @@
                 <h4 id=display-name><strong>Your Akan name will be displayed below:</strong></h4>
                 <p id="result"></p>
                 </form>
-    </div>
+                </form>
+   </section>
+     </div>
+            </div>
     <script src="script.js"></script>
 </body>
 
