@@ -51,18 +51,26 @@
             <label for="fname">FIRST NAME:</label><br>
             <input type="text" id="fname" name="fname" required><br>
             <label for="lname">LAST NAME:</label><br>
-            <input type="text" id="lname" name="lname" required>
+            <input type="text" id="lname" name="lname" required><br>
+
+            <label for ="year">YEAR</label><br>
+            <input type="NUMBER" id="year" name="year"><br>
+            <label for="month">MONTH</label><br>
+            <input type="number" id="month" name="month"><br>
+            <label for="day">DAY</label><br>
+            <input type="number" id="day" name="day"><br>
+
                     <p>Select your gender</p>
                     <input type="radio" id="Male" name="Gender" value="Male">
                     <label for="Male">MALE</label><br>
                     <input type="radio" id="Female" name="Gender" value="Female">
-                    <label for="Female">FEMALE</label><br>
-                    <label for="date">Enter your day of birth</label><br>
-                    <input type="date" name="date" id="date" required>
+                    <label for="Female">FEMALE</label><br>      
             </form>
                 </div>
-                    <input id="get-name" type="submit" name="" value="submit">
-          <br>
+                <form name="my-form" method="get">
+                    <input type="number" name="name" id="name">
+                    <input type="submit" value="submit" id="submit" onClick="getAkanName()">
+                </form>
                 <form onsubmit="clearInput()">
                     <input class="clear" type="submit" value="Clear input">
                 
@@ -71,7 +79,7 @@
                 </form>
    </section>
      </div>
-  <script src="/js/index.js"></script>
+  <script src="/script.js"></script>
 </body>
 
 </html>
