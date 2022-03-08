@@ -17,7 +17,7 @@ function getAkanName() {
     
 
     day = Math.floor(parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7)
-    console.log(day)
+    
 
     if (maleAkanNames[day] === undefined || femaleAkanNames[day] === undefined) {
         alert("invalid date")
