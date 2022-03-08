@@ -3,7 +3,6 @@ var myForm = document.getElementById("myForm");//gets elements by id
 var maleAkanNames = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame']
 var femaleAkanNames = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama']
 
-
 function getAkanName() {
     var Male = document.getElementById("Male")
     var Female = document.getElementById("Female")
