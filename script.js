@@ -10,25 +10,24 @@ function getAkanName() {
     thisDate = date.value.split("-")
 
     var CC = parseInt(thisDate[0][0] + thisDate[0][1])
-    
+
     var YY = parseInt(thisDate[0][2] + thisDate[0][3])
     var MM = parseInt(thisDate[1])
-    var DD = parseInt([2])
-    
+    var DD = parseInt(thisDate[2])
+
 
     day = Math.floor(parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7)
     console.log(day)
 
     if (maleAkanNames[day] === undefined || femaleAkanNames[day] === undefined) {
         alert("invalid date")
-    } else 
-    {
-        if (Male.checked === true) 
-        {
+    } else {
+        if (Male.checked === true) {
             document.getElementById('result').textContent = "Your Akan name is " + maleAkanNames[day];
 
-        } else (Female.checked === true)
-         { 
-            document.getElementById('result').textContent = "Your Akan name is " + femaleAkanNames[day]; }
+        } else if (Female.checked === true)
+        {
+            document.getElementById('result').textContent = "Your Akan name is " + femaleAkanNames[day];
+        }
     }
 }
