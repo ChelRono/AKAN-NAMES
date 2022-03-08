@@ -1,6 +1,3 @@
-.bg-image{
+.bg{
   background-image: url(/images/sun.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
