@@ -4,16 +4,18 @@ var maleAkanNames = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwam
 var femaleAkanNames = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama']
 
 myForm.addEventListener("submit", (e) => {
-    e.preventDefault();//stop from reloading
-
-
-
-var dayOfWeek=Math.floor(parseInt(((CC/4)-2*CC-1)+((5*YY/4))+((26*(MM+1)/10))+DD) %7);
-
-if (formData.get("gender")=="Male"){
-    document.getElementById('result').innerHTML="You were born on " + day[dayOfWeek] + "So your Akan name is" + maleAkanNames[dateEntered.getDate()];
-
-} else {
-    document.getElementById('result').innerHTML="You were born on " +  day[dayOfWeek] +  "So your Akan name is" + femaleAkanNames[dateEntered.getDate()];
-}
-}
+        e.preventDefault(); //on form submission, prevent default
+        var gender=document.getElementByName("gender");
+        var formData = new FormData(e.target);//collect inputs from HTML elements
+        var dateEntered=new Date(formData.get("name"));
+        var day=dateEntered.getDay();
+        alert(day)
+//gender
+        if (formData.get("gender") == "Male") {
+            document.getElementById('result').innerHTML = "You Akan name is" + maleAkanNames[dateEntered.getDate()];
+      alert(male)
+        } else {
+            document.getElementById('result').innerHTML = "YouAkan name is" + femaleAkanNames[dateEntered.getDate()];
+      alert(female)
+        }
+    })

@@ -1,9 +1,9 @@
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: x-large;
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
+body {
+  background-image: url('/images/sun.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 }
 .container{
   background-color: bisque;
