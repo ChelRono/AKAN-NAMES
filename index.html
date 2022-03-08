@@ -6,81 +6,67 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script LANGUAGE="JavaScript">
-        function getAkanName() {
-            var myForm = document.getElementById("myForm").value=day;
-            alert(day) = Math.floor(parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7)
-        
-    </script>
+
 </head>
 
 <body>
-    <style>
-        body {
-            background-image: url('/images/sun.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-    </style>
-    
-        <div class="container ">
-            <h1>AKAN NAMES</h1>
-            <P>Akan names are derived from the Ghanian culture.In Ghana children are given first names and 'day'
-                names which
-                corresponds to the day of the day they were born.</P>
-            <p>Here are some names and the days of the week;</p>
-            <h3>MALE</h3>
-            <ul>
-                <li>Sunday: Kwasi</li>
-                <li> Monday: Kwadwo</li>
-                <li>Tuesday: Kwabena</li>
-                <li>Wednesday: Kwaku</li>
-                <li>Thursday: Yaw</li>
-                <li>Friday: Kofi</li>
-                <li>Saturday: Kwame</li>
-            </ul>
-            <h3>FEMALE</h3>
-            <ul>
-                <li> Sunday: Akosua</li>
-                <li>Monday: Adwoa</li>
-                <li>Tuesday: Abenaa</li>
-                <li>Wednesday: Akua</li>
-                <li>Thursday: Yaa</li>
-                <li>Friday: Afua</li>
-                <li>Saturday: Ama</li>
-            </ul>
-        </div>
-        
-        <div class="container col-lg-4 div-wrapper d-flex justify-content-center align-items-center position-relative">
-            <form name="myForm" method="get">
+    <div class="container ">
+        <h1>AKAN NAMES</h1>
+        <P>Akan names are derived from the Ghanian culture.In Ghana children are given first names and 'day'
+            names which
+            corresponds to the day of the day they were born.</P>
+        <p>Here are some names and the days of the week;</p>
+        <h3>MALE</h3>
+        <ul>
+            <li>Sunday: Kwasi</li>
+            <li> Monday: Kwadwo</li>
+            <li>Tuesday: Kwabena</li>
+            <li>Wednesday: Kwaku</li>
+            <li>Thursday: Yaw</li>
+            <li>Friday: Kofi</li>
+            <li>Saturday: Kwame</li>
+        </ul>
+        <h3>FEMALE</h3>
+        <ul>
+            <li> Sunday: Akosua</li>
+            <li>Monday: Adwoa</li>
+            <li>Tuesday: Abenaa</li>
+            <li>Wednesday: Akua</li>
+            <li>Thursday: Yaa</li>
+            <li>Friday: Afua</li>
+            <li>Saturday: Ama</li>
+        </ul>
+    </div>
+
+    <div class="container col-lg-4 div-wrapper d-flex justify-content-center align-items-center position-relative">
+        <form name="myForm" method="get" onsubmit="return false">
             <h4>Fill in this form;</h4><br>
-        <label for="fname">FIRST NAME:</label><br>
+            <!--  <label for="fname">FIRST NAME:</label><br>
         <input type="text" id="fname" name="fname" required><br>
         <label for="lname">LAST NAME:</label><br>
         <input type="text" id="lname" name="lname" required><br>
+ -->
+            <p>Select your gender</p>
+            <input type="radio" id="Male" name="Gender" value="Male">
+            <label for="Male">MALE</label><br>
+            <input type="radio" id="Female" name="Gender" value="Female">
+            <label for="Female">FEMALE</label><br>
+            <input type="date" id="date" name="date"><br>
+            <label for="date">Enter your date of birth</label><br>
+            <div>
+                <button type="submit" value="submit" id="submit" onClick="getAkanName()">submit</button>
+            </div>
+            <div >
+                <button class="clear" type="submit" value="Clear input" onclick="clearInput()">clear</button>
 
-        <p>Select your gender</p>
-        <input type="radio" id="Male" name="Gender" value="Male">
-        <label for="Male">MALE</label><br>
-        <input type="radio" id="Female" name="Gender" value="Female">
-        <label for="Female">FEMALE</label><br>
-        <input type="date" id="date" name="date"><br>
-        <label for="date">Enter your date of birth</label><br>
-        <div>
-            <input type="submit" value="submit" id="submit" onClick="getAkanName()">
-        </div>
-        <form onsubmit="clearInput()">
-            <input class="clear" type="submit" value="Clear input"> 
+                <h4 id="display-name"><strong>Your Akan name will be displayed below:</strong></h4>
+                <p id="result"></p>
 
-            <h4 id="display-name"><strong>Your Akan name will be displayed below:</strong></h4>
-            <p id="result"></p>
-
+            </div>
         </form>
-    </form>
-    </form>
     </div>
     </div>
     <script src="/script.js"></script>
 </body>
+
 </html>

@@ -1,11 +1,4 @@
-body {
-  background-image: url('/images/sun.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+html {
+  background: url(/images/sun.jpg) no-repeat center fixed;
   background-size: cover;
 }
-}
-.container{
-  background-color: bisque;
-}
-
