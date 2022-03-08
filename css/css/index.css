@@ -1,4 +1,5 @@
-html {
-  background: url(/images/sun.jpg) no-repeat center fixed;
+.bg-image{
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
